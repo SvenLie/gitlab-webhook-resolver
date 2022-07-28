@@ -1,2 +1,2 @@
 # gitlab-webhook-resolver
-Tool to react to gitlab webhook
+Tool to react on gitlab webhook
