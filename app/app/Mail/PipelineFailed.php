@@ -38,7 +38,7 @@ class PipelineFailed extends Mailable
      */
     public function build()
     {
-        $subject = $this->projectName . ' | Pipeline fehlgeschlagen';
+        $subject = $this->projectName . ' | ' . trans('pipeline_failed.pipeline_failed');
         return $this->from(env('MAIL_FROM_ADDRESS'), $this->projectName)->subject($subject)->markdown('emails.pipeline.failed');
     }
 }

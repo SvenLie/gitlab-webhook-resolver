@@ -1,11 +1,10 @@
 @component('mail::message', ['header' => $projectName])
-# Pipeline ist fehlgeschlagen
+# {{ trans('pipeline_failed.heading') }}
 
-Die folgenden Steps sind fehlgeschlagen:
-
+{{ trans('pipeline_failed.description') }}
 
 @component('mail::table')
-    | Step       |
+    | {{ trans('pipeline_failed.step') }}       |
     |  :--------|
     @foreach($failedSteps as $failedStep)
     | {{$failedStep}}    |
@@ -13,6 +12,6 @@ Die folgenden Steps sind fehlgeschlagen:
 @endcomponent
 
 @component('mail::button', ['url' => $linkToPipeline])
-Link zur Pipeline
+    {{ trans('pipeline_failed.link_text') }}
 @endcomponent
 @endcomponent
